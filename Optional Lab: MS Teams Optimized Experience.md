@@ -33,6 +33,8 @@
 
    msiexec /i C:\Teams_windows_x64.msi /l*v teamsinstallLog ALLUSER=1 ALLUSERS=1
    
+   Restart-Computer -Force
+   
    ```
 
    ![ws name.](media/teams5.png)
