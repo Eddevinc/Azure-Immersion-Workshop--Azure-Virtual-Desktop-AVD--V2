@@ -18,7 +18,7 @@
 
    ![ws name.](media/teams4.png)
    
-1. Paste the following commands into the Powershell script window and select **Run**. Once the execution is completed, **The operation completed successfully.** message wil be displayed in output window
+1. Paste the following commands into the Powershell script window and select **Run**. Once the execution is completed, **The operation completed successfully** message wil be displayed in output window
 
    ```
    reg add "HKLM\SOFTWARE\Microsoft\Teams" /v IsWVDEnvironment /t REG_DWORD /d 1 /f
@@ -38,3 +38,5 @@
    ```
 
    ![ws name.](media/teams5.png)
+
+   >**NOTE**: Wait for 3 minutes as the Session VM will take time to restart.
