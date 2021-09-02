@@ -16,4 +16,23 @@
  
 1. Under **Operations** blade, Select **Run Command**. Select **RunPowerShellScript**.
 
-   ![ws name.](media/teams3.png)
+   ![ws name.](media/teams4.png)
+   
+1. Paste the following commands into the Powershell script window and select **Run**. Once the execution is completed, **The operation completed successfully.** message wil be displayed in output window
+
+   ```
+   reg add "HKLM\SOFTWARE\Microsoft\Teams" /v IsWVDEnvironment /t REG_DWORD /d 1 /f
+
+   $WebClient = New-Object System.Net.WebClient
+   $WebClient.DownloadFile("https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWFYsj","C:\WebSocketService.msi")
+ 
+   msiexec /i C:\WebSocketService.msi /qn /l*v WebSocketServicelog ALLUSER=1 ALLUSERS=1
+
+   $WebClient = New-Object System.Net.WebClient
+   $WebClient.DownloadFile("https://teams.microsoft.com/downloads/desktopurl?env=production&plat=windows&arch=x64&managedInstaller=true&download=true","C:\Teams_windows_x64.msi")
+
+   msiexec /i C:\Teams_windows_x64.msi /l*v teamsinstallLog ALLUSER=1 ALLUSERS=1
+   
+   ```
+
+   ![ws name.](media/teams5.png)
