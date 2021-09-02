@@ -92,4 +92,4 @@
 
   ![](media/avdv29.png)
   
-  
+7. Login to AVD Client to see the MFA getting triggered.
