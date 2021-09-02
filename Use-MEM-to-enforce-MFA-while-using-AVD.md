@@ -3,8 +3,8 @@
 **Task 1: Setup Multi-Factor Authentication (MFA)**
 
 1. In your JumpVM launch browser and visit `https://AKA.ms/proofup` and if asked to login then login using the following credentials:
-  - username **<inject key="AzureAdUserEmail" />**
-  - password **<inject key="AzureAdUserPassword" />**
+  - username: **<inject key="AzureAdUserEmail" />**
+  - password: **<inject key="AzureAdUserPassword" />**
   
 2. On a prompt saying "More Information Required" click on **Next**.
 
