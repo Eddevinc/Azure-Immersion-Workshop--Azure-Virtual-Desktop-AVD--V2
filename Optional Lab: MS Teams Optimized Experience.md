@@ -27,14 +27,14 @@
 
    $WebClient = New-Object System.Net.WebClient
    $WebClient.DownloadFile("https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWFYsj","C:\WebSocketService.msi")
- 
-   msiexec /i C:\WebSocketService.msi /qn /l*v WebSocketServicelog ALLUSER=1 ALLUSERS=1
+
+   msiexec /i C:\WebSocketService.msi /qn
 
    $WebClient = New-Object System.Net.WebClient
    $WebClient.DownloadFile("https://teams.microsoft.com/downloads/desktopurl?env=production&plat=windows&arch=x64&managedInstaller=true&download=true","C:\Teams_windows_x64.msi")
 
-   msiexec /i C:\Teams_windows_x64.msi /l*v teamsinstallLog ALLUSER=1 ALLUSERS=1
-   
+   msiexec /i C:\Teams_windows_x64.msi ALLUSER=1
+
    Restart-Computer -Force
    
    ```
@@ -106,3 +106,23 @@
     - Password: **<inject key="AzureAdUserPassword" />**
    
     ![ws name.](media/ch14.png)
+    
+1. Teams application will start loading.
+
+   ![ws name.](media/avdv214.png)
+   
+1. After the Teams application is launched, click on the **three dots** *(1)* then **About** *(2)* and click on **Version** *(3)*.
+
+   ![ws name.](media/avdv215.png)
+
+1. Now we will get a message on top of the teams application saying **The Teams Version 1.x.x.. is WVD Media Optimised**.
+
+   ![ws name.](media/avdv216.png)
+   
+1. Again click on the **three dots** *(1)* on the top and select **Settings** *(2)*.
+
+   ![ws name.](media/avdv217.png)
+   
+1. Now under Settings, click on **Devices** and explore the media devices connected to your local desktop.
+
+   ![ws name.](media/avdv218.png)
